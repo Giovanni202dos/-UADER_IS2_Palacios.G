@@ -19,7 +19,7 @@ def factorial(num):
             num -= 1
         return fact 
 
-if len(sys.argv) == 0:
+if len(sys.argv) == 1:  #cambie por 1(habia un cero) si hay un elemento guardado es porque no ingreso el numero
    print("Debe informar un número!")
    sys.exit()
 num=int(sys.argv[1])
