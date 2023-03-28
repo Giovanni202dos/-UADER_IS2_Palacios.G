@@ -19,14 +19,18 @@ def factorial(num):
             num -= 1
         return fact 
 
-desde, hasta =sys.argv[1].split('-')
-desde =int(desde)
-hasta =int(hasta)
-if len(sys.argv) == 1 or desde>hasta:  #cambie por 1(habia un cero) si hay un elemento guardado es porque no ingreso el numero
-   print("Debe informar un rango adecuado!")
+
+if len(sys.argv) == 1:  #cambie por 1(habia un cero) si hay un elemento guardado es porque no ingreso el numero
+   print("Debe ingresar un rango!")
    sys.exit()
 else: 
-    print('entroo')
-    for i in range(desde, hasta+1):
-        print("Factorial ",i,"! es ", factorial(i)) 
+    desde, hasta =sys.argv[1].split('-')
+    desde =int(desde)
+    hasta =int(hasta)
+    if desde>hasta:
+        print("Debe ingresar un rango adecuado!")
+        sys.exit()
+    else:
+        for i in range(desde, hasta+1):
+            print("Factorial ",i,"! es ", factorial(i)) 
 
