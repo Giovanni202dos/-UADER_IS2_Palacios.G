@@ -1,6 +1,8 @@
 import sys
 
 class Factorial:    #clase Factorial
+    def __init__(self, min, max):
+        pass
 
     def run(self,num):  #Metodo run (facotorial de un solo numero)
         if num < 0: 
