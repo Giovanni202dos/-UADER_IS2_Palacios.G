@@ -1,4 +1,4 @@
-"C:\\Users\\giovanni palacios\\Desktop\\Tercer a\u00f1o\\Ingenieria de Software 2\\(2)-Patrones de Arquitectura y Programaci\u00f3n\\tp2_chatgpt.py": {
+"C:\\Users\\giovanni\\Desktop\\Tercer a\u00f1o\\Ingenieria de Software 2\\(2)-Patrones de Arquitectura y Programaci\u00f3n\\tp2_chatgpt.py": {
       "comment_ratio": 21.86525265127885,
       "cyclomatic_complexity": 7,
       "fanout_external": 2,
