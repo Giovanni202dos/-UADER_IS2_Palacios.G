@@ -1,6 +1,6 @@
 
 class Numero():  
-    def operation(self) -> tuple:
+    def operation(self) -> "tuple[str, float]":
         pass
 
 
@@ -8,7 +8,7 @@ class Numero():
 class ConcreteNumero(Numero): #se le debe pasar un numero
     def __init__(self,num) -> None:
         self.num = num
-    def operation(self) -> tuple:   #devuelve la operacion q se realiza
+    def operation(self) -> "tuple[str, float]":   #devuelve la operacion q se realiza
         return f"ConcreteNumero: {self.num}",self.num
 
 
@@ -25,7 +25,7 @@ class Decorator(Numero):
     def numero(self) -> Numero:   #@property es un decorador, hace q cuando se llame al metodo no sea necesario usar los parentesis al final
         return self._numero
 
-    def operation(self) -> tuple:
+    def operation(self) -> "tuple[str, float]":
         return self._numero.operation()
 
 
@@ -35,19 +35,19 @@ class Decorator(Numero):
 
 
 class ConcreteDecoratorSumar2(Decorator):    #ConcreteDecoratorSumar2
-    def operation(self) -> tuple:
+    def operation(self) -> "tuple[str, float]":
         texto, num =self.numero.operation()
         return f"ConcreteDecoratorSumar2({texto})",num+2
 
 
 
 class ConcreteDecoratorMulti2(Decorator):    #ConcreteDecoratorMulti2
-    def operation(self) -> tuple:
+    def operation(self) -> "tuple[str, float]":
         texto, num =self.numero.operation()
         return f"ConcreteDecoratorMulti2({texto})",num*2
 
 class ConcreteDecoratorDiv3(Decorator):    #ConcreteDecoratorMulti2
-    def operation(self) -> tuple:
+    def operation(self) -> "tuple[str, float]":
         texto, num =self.numero.operation()
         return f"ConcreteDecoratorDiv3({texto})",num/3
 
@@ -65,7 +65,7 @@ if __name__ == "__main__":
 
     # This way the client code can support both simple components...
 
-    simple = ConcreteNumero(4)
+    simple = ConcreteNumero(10)
     print("Client: I've got a simple component:")
     client_code(simple)
     print("\n")
