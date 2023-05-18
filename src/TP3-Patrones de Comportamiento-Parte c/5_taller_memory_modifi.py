@@ -45,7 +45,6 @@ class FileWriterCaretaker:	#el que guarda todas las versiones (en este caso solo
 			print('no hay capacidad')
 
 	def undo(self, writer, num):
-		num+=1	#tiene algo que ver con no contar la ultima version
 		if num<len(self.objs):
 			#print('ggg',self.objs[num].content)
 			self.objs.reverse()	#lo doy vuelta
@@ -94,10 +93,10 @@ if __name__ == '__main__':
 
 
 
-	# print("Se graba información adicional")
-	# writer.write("Material5\n")
-	# caretaker.save(writer)
-	# writer.content_actual()
+	print("Se graba información adicional")
+	writer.write("Material5\n")
+	caretaker.save(writer)
+	writer.content_actual()
 
 	caretaker.mostrar_todas()
 
@@ -110,6 +109,9 @@ if __name__ == '__main__':
 	writer.content_actual()
 
 	caretaker.undo(writer ,2)
+	writer.content_actual()
+
+	caretaker.undo(writer ,3)
 	writer.content_actual()
 
 
